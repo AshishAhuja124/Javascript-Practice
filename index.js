@@ -133,27 +133,60 @@
 
 //Call bind and apply methods
 
-let name1 = {
-    firstName: 'Ashish',
-    lastName: 'Ahuja'
+// let name1 = {
+//     firstName: 'Ashish',
+//     lastName: 'Ahuja'
+// }
+
+// let printFullName = function(hometown,state) {
+//     console.log(this.firstName + ' ' + this.lastName  + 'from' + hometown + " , " + state);
+// }
+
+// printFullName.call(name1,'Hyd', 'TS');
+
+// let name2 = {
+//     firstName: 'Sachin',
+//     lastName: 'tendulkar'
+// }
+
+// printFullName.call(name2, "mum", 'Mh');   //call method
+// printFullName.apply(name2, ["mum", 'Mh']); //apply method
+
+// //Bind method
+
+// let printMyName = printFullName.bind(name2, "mum", 'Mh');
+// console.log(printMyName);
+// printMyName();
+
+//Function statement or Function declaration
+
+function a() {
+    console.log('Function statement');
 }
 
-let printFullName = function(hometown,state) {
-    console.log(this.firstName + ' ' + this.lastName  + 'from' + hometown + " , " + state);
+//Function Expression
+
+var b = function(parameters) {
+    console.log('Function expression')
+}
+a(arguments);
+b(12);
+
+//Difference between func declartion and expression is hoisting 
+//because in case 2 it treats b as a normal variable. It throws a error.
+
+//Anonymous functions: Function without a name but can used as a value
+
+var b = function() {
+    console.log('Function expression')
 }
 
-printFullName.call(name1,'Hyd', 'TS');
-
-let name2 = {
-    firstName: 'Sachin',
-    lastName: 'tendulkar'
+//Named function expression: Providing name to a function and that name can be used inside the scope
+var b = function xyx() {
+    console.log('Function expression')
+    console.log(xyz)
 }
+b();
 
-printFullName.call(name2, "mum", 'Mh');   //call method
-printFullName.apply(name2, ["mum", 'Mh']); //apply method
 
-//Bind method
-
-let printMyName = printFullName.bind(name2, "mum", 'Mh');
-console.log(printMyName);
-printMyName();
+//First class functions: passing functions inside other function or return a function from a function or assign function as a value to a variable
