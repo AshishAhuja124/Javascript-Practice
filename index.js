@@ -160,33 +160,51 @@
 
 //Function statement or Function declaration
 
-function a() {
-    console.log('Function statement');
-}
+// function a() {
+//     console.log('Function statement');
+// }
 
-//Function Expression
+// //Function Expression
 
-var b = function(parameters) {
-    console.log('Function expression')
-}
-a(arguments);
-b(12);
+// var b = function(parameters) {
+//     console.log('Function expression')
+// }
+// a(arguments);
+// b(12);
 
 //Difference between func declartion and expression is hoisting 
 //because in case 2 it treats b as a normal variable. It throws a error.
 
 //Anonymous functions: Function without a name but can used as a value
 
-var b = function() {
-    console.log('Function expression')
-}
+// var b = function() {
+//     console.log('Function expression')
+// }
 
-//Named function expression: Providing name to a function and that name can be used inside the scope
-var b = function xyx() {
-    console.log('Function expression')
-    console.log(xyz)
-}
-b();
+// //Named function expression: Providing name to a function and that name can be used inside the scope
+// var b = function xyx() {
+//     console.log('Function expression')
+//     console.log(xyz)
+// }
+// b();
 
 
 //First class functions: passing functions inside other function or return a function from a function or assign function as a value to a variable
+//The ability to use finctins as values are first class functions .
+//Functins are first class citizens(first class functions)
+
+
+//Callback functions
+
+setTimeout(function() {
+    console.log('timer');
+},5000);
+
+function x(y) {
+    console.log('x');
+    y();
+}
+
+x(function y() {
+    console.log('y');
+});
