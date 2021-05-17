@@ -46,6 +46,6 @@
 
 // console.log(x)
 
-const scores = [10,20,30,40,50];
-let x = scores.reduce(score => score > 30);
-console.log(x)
+// const scores = [10,20,30,40,50];
+// let x = scores.reduce(score => score > 30);
+// console.log(x)

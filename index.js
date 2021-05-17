@@ -131,32 +131,6 @@
 // var close = outer(); // outer()();
 // close();
 
-//Call bind and apply methods
-
-// let name1 = {
-//     firstName: 'Ashish',
-//     lastName: 'Ahuja'
-// }
-
-// let printFullName = function(hometown,state) {
-//     console.log(this.firstName + ' ' + this.lastName  + 'from' + hometown + " , " + state);
-// }
-
-// printFullName.call(name1,'Hyd', 'TS');
-
-// let name2 = {
-//     firstName: 'Sachin',
-//     lastName: 'tendulkar'
-// }
-
-// printFullName.call(name2, "mum", 'Mh');   //call method
-// printFullName.apply(name2, ["mum", 'Mh']); //apply method
-
-// //Bind method
-
-// let printMyName = printFullName.bind(name2, "mum", 'Mh');
-// console.log(printMyName);
-// printMyName();
 
 //Function statement or Function declaration
 
@@ -209,18 +183,49 @@
 //     console.log('y');
 // });
 
-console.log('star');
-setTimeout(function(cb) {
-    console.log('cb')
-},5000);
+// console.log('star');
+// setTimeout(function(cb) {
+//     console.log('cb')
+// },0);
 
-console.log('end');
+// console.log('end');
 
-let startDate = new Date().getTime();
-let endDate = startDate;
 
-while(endDate < startDate + 10000) {
-    endDate = new Date().getTime();
+//blocking the code
+// let startDate = new Date().getTime();
+// let endDate = startDate;
+
+// while(endDate < startDate + 10000) {
+//     endDate = new Date().getTime();
+// }
+
+// console.log('while expires and blocking the code');
+
+
+//Call bind and apply methods
+
+let name1 = {
+    firstName: 'Ashish',
+    lastName: 'Ahuja'
 }
 
-console.log('while expires and blocking the code');
+let printFullName = function(hometown,state) {
+    console.log(this.firstName + ' ' + this.lastName  + 'from' + hometown + " , " + state);
+}
+
+//function burrowing 
+printFullName.call(name1,'Hyd', 'TS');
+
+let name2 = {
+    firstName: 'Sachin',
+    lastName: 'tendulkar'
+}
+
+printFullName.call(name2, "mumbai", 'Maharastra');   //call method
+printFullName.apply(name2, ["mumbai", 'Maharastra']); //apply method
+
+//Bind method: Creates a copy of function that can be called later
+
+let printMyName = printFullName.bind(name2, "mum", 'Mh');
+console.log(printMyName);
+printMyName();
