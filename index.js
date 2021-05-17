@@ -1,5 +1,6 @@
 //
 //Hoisting 
+//We can access variables and functions even before we have initialised
 
 // var x = 7;
 // function getName() {
@@ -239,3 +240,17 @@
 
  //Throatling makes an api call only after regular intervals
 
+//Currying in javascript: can be achieved by bind method and also by closures.
+//It simply means function burrowing as we did in bind method
+//Its a technique of evaluating a function with multiple arguments
+
+
+let multiply = function (x,y) {
+    console.log(x * y);
+}
+
+let multiplyByTwo = multiply.bind(this,2);
+multiplyByTwo(3);
+
+let multiplyByThree = multiply.bind(multiply,3,5);
+multiplyByThree();
