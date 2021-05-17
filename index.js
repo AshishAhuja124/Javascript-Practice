@@ -204,28 +204,38 @@
 
 //Call bind and apply methods
 
-let name1 = {
-    firstName: 'Ashish',
-    lastName: 'Ahuja'
-}
+// let name1 = {
+//     firstName: 'Ashish',
+//     lastName: 'Ahuja'
+// }
 
-let printFullName = function(hometown,state) {
-    console.log(this.firstName + ' ' + this.lastName  + 'from' + hometown + " , " + state);
-}
+// let printFullName = function(hometown,state) {
+//     console.log(this.firstName + ' ' + this.lastName  + 'from' + hometown + " , " + state);
+// }
 
-//function burrowing 
-printFullName.call(name1,'Hyd', 'TS');
+// //function burrowing 
+// printFullName.call(name1,'Hyd', 'TS');
 
-let name2 = {
-    firstName: 'Sachin',
-    lastName: 'tendulkar'
-}
+// let name2 = {
+//     firstName: 'Sachin',
+//     lastName: 'tendulkar'
+// }
 
-printFullName.call(name2, "mumbai", 'Maharastra');   //call method
-printFullName.apply(name2, ["mumbai", 'Maharastra']); //apply method
+// printFullName.call(name2, "mumbai", 'Maharastra');   //call method
+// printFullName.apply(name2, ["mumbai", 'Maharastra']); //apply method
 
-//Bind method: Creates a copy of function that can be called later
+// //Bind method: Creates a copy of function that can be called later
 
-let printMyName = printFullName.bind(name2, "mum", 'Mh');
-console.log(printMyName);
-printMyName();
+// let printMyName = printFullName.bind(name2, "mum", 'Mh');
+// console.log(printMyName);
+// printMyName();
+
+
+//Debouncing concept in javascript: executes a function only after some cooling period or certain gap
+//Lets say we are searching a item in search bar and type school..so a call to api is made and then we type school bags ..then a final call is made .
+
+//In debouncing: if we take example of key strokes in search bar,only api call is made when the difference between 2 key press events is greater than a certain limit
+
+
+ //Throatling makes an api call only after regular intervals
+
