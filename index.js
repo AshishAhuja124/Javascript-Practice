@@ -245,12 +245,25 @@
 //Its a technique of evaluating a function with multiple arguments
 
 
-let multiply = function (x,y) {
-    console.log(x * y);
-}
+// let multiply = function (x,y) {
+//     console.log(x * y);
+// }
 
-let multiplyByTwo = multiply.bind(this,2);
-multiplyByTwo(3);
+// let multiplyByTwo = multiply.bind(this,2);
+// multiplyByTwo(3);
 
-let multiplyByThree = multiply.bind(multiply,3,5);
-multiplyByThree();
+// let multiplyByThree = multiply.bind(multiply,3,5);
+// multiplyByThree();
+
+// Async and defer attributes:
+//both are boolean attributes used along with script tags to load the external scripts efficiently into our web pages
+
+//In normal html, once it sees script tag,it fetches the script and executes then and there itself and blocks the code
+
+//In async html parsing is done,and once it sees sccript tag, it loads the script async way and once all the scirpts are loaded into browser,then it exceutes the script then and there iself blocking the html parsing at that particular momement
+
+//In defer attribute: html is done and scripts are fetched parallel and once the html parsing is done, then the scripts are executed.
+
+//Note:
+
+//Async doesnt guarentee the order of execution of scripts but defer does.
