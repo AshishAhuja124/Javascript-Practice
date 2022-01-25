@@ -32,9 +32,6 @@
 //window object
 
 // var a = 10;
-// function b() {
-//     var x = 10;
-// }
 
 // console.log(window.a);  //10
 // console.log(a)          //10
@@ -267,3 +264,29 @@
 //Note:
 
 //Async doesnt guarentee the order of execution of scripts but defer does.
+
+
+
+//Event bubbling and capturing/Trickling are two ways of event propagation in DOM tree
+
+//Bubble up and trickling down
+
+//Usecapture = true then capturing occurs
+//If we dont spe
+
+
+// window.speechSynthesis.speak(new SpeechSynthesisUtterance('ashshi'))
+
+
+//Higher order functions
+
+//Function which is passed as an argument to other function
+
+// function x() {
+//     console.log('here x is callback function')
+// }
+
+// function y(x) {
+//     console.log('here y is higher order function')
+// }
+
