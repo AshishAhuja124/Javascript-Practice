@@ -33,4 +33,7 @@ Promise.race([p1, p2, p3])
 //promise.any
 Promise.any([p1, p2, p3])
     .then(res => console.log(res))
-    .catch((err) => console.error(err))    
+    .catch((err) => {
+        console.error(err)
+        console.log(err.errors);
+    })    
