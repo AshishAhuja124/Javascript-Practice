@@ -18,5 +18,7 @@ Fulfills when all promises settle.Even if one api fails it waits for other api t
 ### Promise.any()
 Fulfills when any of the promises fulfills; rejects when all of the promises reject.
 
+--If all promised are rejected, it gives special error called as Aggregate error
+
 ### Promise.race()
 Settles when any of the promises settles. In other words, fulfills when any of the promises fulfills; rejects when any of the promises rejects.
