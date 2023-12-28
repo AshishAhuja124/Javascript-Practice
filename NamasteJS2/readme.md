@@ -22,3 +22,7 @@ Fulfills when any of the promises fulfills; rejects when all of the promises rej
 
 ### Promise.race()
 Settles when any of the promises settles. In other words, fulfills when any of the promises fulfills; rejects when any of the promises rejects.
+
+
+### async and await
+await can only be used inside an async function
