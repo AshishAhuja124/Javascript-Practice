@@ -15,15 +15,15 @@ const p3 = new Promise((resolve, reject) => {
 });
 
 
-// Promise.all([p1, p2, p3])
-//     .then(res => console.log(res))
-//     .catch((err) => console.error(err))
+Promise.all([p1, p2, p3])
+    .then(res => console.log(res))
+    .catch((err) => console.error(err))
 
 //Promise.allSettle
 
-// Promise.allSettled([p1, p2, p3])
-//     .then(res => console.log(res))
-//     .catch((err) => console.error(err))
+Promise.allSettled([p1, p2, p3])
+    .then(res => console.log(res))
+    .catch((err) => console.error(err))
 
 //Promise.race    
 Promise.race([p1, p2, p3])

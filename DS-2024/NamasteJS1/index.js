@@ -16,16 +16,16 @@
 // var x = 1;
 // a();
 // b();
-// console.log(x);
+// console.log(x); //1
 
 // function a() {
 //     var x = 10;
-//     console.log(x);
+//     console.log(x); // 10
 // }
 
 // function b() {
 //     var x = 100;
-//     console.log(x);
+//     console.log(x); 100
 // }
 
 
@@ -55,30 +55,34 @@
 // var a = 10;
 
 // {
-//     var a = 20;
-//     console.log(a);
+//     var a = 20; 
+//     console.log(a); // 20
 
 // }
-// console.log(a);
+// console.log(a); //20
 
 // let a = 10;
 // function c () {
 //     var a = 20;
-//     console.log(a);
+//     console.log(a); //20
 // }
 // c();
-// console.log(a);
+// console.log(a); //10
 
 //closures
 
 // function x() {
 //     var a = 7;
 //     function y () {
-//         console.log(a)
+//         console.log(a) //7
 //     }
 //     y();
+//     console.log(a) //7
 // }
+// console.log(a) //ReferenceError: a is not defined
+
 // x();  
+
 
 
 //2
@@ -87,7 +91,7 @@
 // function x() {
 //     var a = 7;
 //     function y () {
-//         console.log(a)
+//         console.log(a) //7
 //     }
 // return y;
 // }
@@ -104,7 +108,7 @@
 //     }
 //     console.log('Ashish')
 // }
-// x();
+// x();  // Ashish 1 2 3 4 5 
 
 // function x() {
 //     for( var i=1; i<=5; i++) {
@@ -153,7 +157,7 @@
 //     console.log('Function expression')
 // }
 
-// //Named function expression: Providing name to a function and that name can be used inside the scope
+//Named function expression: Providing name to a function and that name can be used inside the scope
 // var b = function xyx() {
 //     console.log('Function expression')
 //     console.log(xyz)

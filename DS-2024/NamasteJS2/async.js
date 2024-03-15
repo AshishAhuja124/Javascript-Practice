@@ -60,6 +60,7 @@ const p2 = new Promise((resolve, reject) => {
 async function handle() {
     console.log("hello world");
     const val1 = await p1;
+    //js engine waits for promise to resolve
     console.log("Namaste JS 1"); //here it waits for 5 sec and then everything is printed
 
     const val2 = await p2;

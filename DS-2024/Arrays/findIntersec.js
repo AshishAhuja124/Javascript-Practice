@@ -11,3 +11,8 @@ const arr2 = [3, 4, 5, 6, 7];
 
 const intersection = findIntersect(arr1, arr2);
 console.log(intersection);
+
+
+const person = {name: 'Ash' ,age: 25, address: {city: 'xyz'}}
+const {name, age, address: {city}} = person;
+console.log(name, age, city)
